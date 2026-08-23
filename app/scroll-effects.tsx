@@ -25,6 +25,12 @@ const revealSelectors = [
   ".equipment-grid article",
   ".quote-guide > *",
   ".products-cta > *",
+  ".about-hero-copy > *",
+  ".about-story > *",
+  ".about-experience > *",
+  ".principles-grid article",
+  ".about-audience > *",
+  ".about-cta > *",
   "footer > *",
 ];
 

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const whatsappBaseMessage =
   "Olá! Vi o site da Disk Karaokê e quero consultar disponibilidade e valores para o meu evento.";
 
@@ -33,14 +31,14 @@ function SocialIcon({ name }: { name: "instagram" | "facebook" }) {
   );
 }
 
-export function SiteHeader({ active }: { active?: "home" | "products" }) {
+export function SiteHeader({ active }: { active?: "home" | "about" | "products" }) {
   return (
     <header className="site-header">
       <a className="brand" href="/" aria-label="Disk Karaokê — início">
-        <Image src="/logo-disk-karaoke.png" alt="Disk Karaokê" width={238} height={121} priority />
+        <img src="/logo-disk-karaoke.png" alt="Disk Karaokê" width={238} height={121} />
       </a>
       <nav aria-label="Navegação principal">
-        <a href="/#sobre">Sobre</a>
+        <a href="/sobre" aria-current={active === "about" ? "page" : undefined}>Sobre</a>
         <a href="/produtos" aria-current={active === "products" ? "page" : undefined}>Produtos</a>
         <a href="/#como-funciona">Como funciona</a>
         <a href="/#duvidas">Dúvidas</a>
@@ -54,13 +52,13 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand">
-          <Image src="/logo-disk-karaoke.png" alt="Disk Karaokê" width={238} height={121} />
+          <img src="/logo-disk-karaoke.png" alt="Disk Karaokê" width={238} height={121} />
           <p>Sua festa, seu palco.</p>
         </div>
 
         <div className="footer-column">
           <h2>Navegue</h2>
-          <a href="/#sobre">Sobre</a>
+          <a href="/sobre">Sobre</a>
           <a href="/produtos">Produtos</a>
           <a href="/#como-funciona">Como funciona</a>
           <a href="/#duvidas">Dúvidas</a>

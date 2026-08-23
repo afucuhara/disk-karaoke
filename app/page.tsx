@@ -144,7 +144,7 @@ export default function Home() {
             <a className="button" href={whatsappLink} target="_blank" rel="noreferrer">
               <WhatsAppIcon /> Consultar minha data
             </a>
-            <a className="text-link" href="#sobre">Conhecer a experiência <span>↓</span></a>
+            <a className="text-link" href="/sobre">Conhecer a experiência <span>↗</span></a>
           </div>
           <p className="microcopy"><span>●</span> Agenda aberta para reservas</p>
         </div>

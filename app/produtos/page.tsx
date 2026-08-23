@@ -88,7 +88,7 @@ export default function ProductsPage() {
                 {item.includes.map((included) => <li key={included}><span>✓</span>{included}</li>)}
               </ul>
               <div className="package-ideal"><strong>Ideal para</strong><p>{item.ideal}</p></div>
-              <a className={item.featured ? "button" : "package-button"} href={packageWhatsappLink(item.title)} target="_blank" rel="noreferrer">
+              <a className="package-button" href={packageWhatsappLink(item.title)} target="_blank" rel="noreferrer">
                 <WhatsAppIcon /> Solicitar orçamento
               </a>
             </article>
