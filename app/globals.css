@@ -363,6 +363,14 @@ main { overflow: hidden; }
 .about-cta h2 { max-width: 900px; margin: 0 auto; font-size: clamp(50px, 6vw, 84px); line-height: .95; letter-spacing: 0; text-transform: uppercase; }
 .about-cta > p:not(.eyebrow) { max-width: 620px; margin: 28px auto; color: var(--muted); font-size: 17px; line-height: 1.7; }
 
+.hero h1,
+.products-hero h1,
+.about-hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
 .floating-whatsapp {
   position: fixed; z-index: 50; right: 24px; bottom: 24px; width: 58px; height: 58px; display: grid;
   place-items: center; padding: 0; border: 2px solid #fff; border-radius: 50%; background: #25d366;
