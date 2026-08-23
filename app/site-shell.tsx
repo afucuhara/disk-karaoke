@@ -35,13 +35,15 @@ export function SiteHeader({ active }: { active?: "home" | "about" | "products" 
   return (
     <header className="site-header">
       <a className="brand" href="/" aria-label="Disk Karaokê — início">
-        <img src="/logo-disk-karaoke.png" alt="Disk Karaokê" width={238} height={121} />
+        <img src="/logo-disk-karaoke.webp" alt="Disk Karaokê" width={500} height={253} />
       </a>
       <nav aria-label="Navegação principal">
+        <a href="/" aria-current={active === "home" ? "page" : undefined}>Início</a>
         <a href="/sobre" aria-current={active === "about" ? "page" : undefined}>Sobre</a>
         <a href="/produtos" aria-current={active === "products" ? "page" : undefined}>Produtos</a>
         <a href="/#como-funciona">Como funciona</a>
         <a href="/#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
       </nav>
     </header>
   );
@@ -49,15 +51,16 @@ export function SiteHeader({ active }: { active?: "home" | "about" | "products" 
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" id="contato">
       <div className="footer-main">
         <div className="footer-brand">
-          <img src="/logo-disk-karaoke.png" alt="Disk Karaokê" width={238} height={121} />
+          <img src="/logo-disk-karaoke.webp" alt="Disk Karaokê" width={500} height={253} loading="lazy" />
           <p>Sua festa, seu palco.</p>
         </div>
 
         <div className="footer-column">
           <h2>Navegue</h2>
+          <a href="/">Início</a>
           <a href="/sobre">Sobre</a>
           <a href="/produtos">Produtos</a>
           <a href="/#como-funciona">Como funciona</a>

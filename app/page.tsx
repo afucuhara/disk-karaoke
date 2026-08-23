@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
 import { ScrollEffects } from "./scroll-effects";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WhatsAppIcon, whatsappLink } from "./site-shell";
+
+export const metadata: Metadata = {
+  title: { absolute: "Disk Karaokê | Sua festa, seu palco" },
+  description: "Aluguel de karaokê profissional com mais de 12 mil músicas, pontuação individual, entrega, montagem e configuração para o seu evento.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Disk Karaokê | Sua festa, seu palco",
+    description: "Transforme seu evento em um grande show com mais de 12 mil músicas.",
+    url: "/",
+    images: [{ url: "/og.webp", width: 1200, height: 630, alt: "Disk Karaokê — Sua festa, seu palco" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Disk Karaokê | Sua festa, seu palco",
+    description: "Transforme seu evento em um grande show com mais de 12 mil músicas.",
+    images: ["/og.webp"],
+  },
+};
 
 const benefits = [
   {

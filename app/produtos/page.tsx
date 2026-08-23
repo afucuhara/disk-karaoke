@@ -3,11 +3,20 @@ import { ScrollEffects } from "../scroll-effects";
 import { FloatingWhatsApp, packageWhatsappLink, SiteFooter, SiteHeader, WhatsAppIcon } from "../site-shell";
 
 export const metadata: Metadata = {
-  title: "Pacotes de locação | Disk Karaokê",
+  title: { absolute: "Pacotes de locação | Disk Karaokê" },
   description: "Conheça as opções de locação de karaokê, som, TV e iluminação para festas e eventos.",
+  alternates: { canonical: "/produtos" },
   openGraph: {
     title: "Pacotes de locação | Disk Karaokê",
     description: "Escolha a estrutura ideal para o seu evento e solicite um orçamento personalizado.",
+    url: "/produtos",
+    images: [{ url: "/hero-corporate.webp", width: 1600, height: 901, alt: "Evento corporativo com karaokê profissional" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pacotes de locação | Disk Karaokê",
+    description: "Escolha a estrutura ideal para o seu evento e solicite um orçamento personalizado.",
+    images: ["/hero-corporate.webp"],
   },
 };
 

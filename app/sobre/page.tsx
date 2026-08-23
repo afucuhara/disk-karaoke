@@ -3,11 +3,20 @@ import { ScrollEffects } from "../scroll-effects";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WhatsAppIcon, whatsappLink } from "../site-shell";
 
 export const metadata: Metadata = {
-  title: "Sobre a Disk Karaokê | Sua festa, seu palco",
+  title: { absolute: "Sobre a Disk Karaokê | Sua festa, seu palco" },
   description: "Conheça a Disk Karaokê e a experiência de levar repertório, equipamento e estrutura pronta para festas e eventos.",
+  alternates: { canonical: "/sobre" },
   openGraph: {
     title: "Sobre a Disk Karaokê",
     description: "Mais do que equipamentos: uma experiência de karaokê preparada para conectar pessoas.",
+    url: "/sobre",
+    images: [{ url: "/experience-elegant-party.webp", width: 1400, height: 1050, alt: "Convidados reunidos em uma festa de karaokê elegante" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sobre a Disk Karaokê",
+    description: "Mais do que equipamentos: uma experiência de karaokê preparada para conectar pessoas.",
+    images: ["/experience-elegant-party.webp"],
   },
 };
 
