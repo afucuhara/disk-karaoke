@@ -124,6 +124,19 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      <section className="product-media section" aria-label="Detalhes do equipamento de karaokê">
+        <div className="product-media-heading">
+          <div className="section-tag">Detalhes da estrutura</div>
+          <h2>Do código da música<br />ao primeiro <em>refrão.</em></h2>
+          <p>Uma experiência visual, simples e pronta para colocar toda a turma para cantar.</p>
+        </div>
+        <div className="product-media-grid">
+          <img src="/media/karaoke-estrutura-tv-som.webp" alt="TV, microfones e caixa de som da estrutura de karaokê" width={1600} height={1600} loading="lazy" />
+          <img src="/media/karaoke-microfones.webp" alt="Dois microfones sem fio diante da tela do karaokê" width={1600} height={1600} loading="lazy" />
+          <img src="/media/karaoke-pontuacao.webp" alt="Tela do karaokê exibindo a pontuação da apresentação" width={1600} height={1600} loading="lazy" />
+        </div>
+      </section>
+
       <section className="quote-guide section">
         <div>
           <div className="section-tag">Orçamento sob medida</div>

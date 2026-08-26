@@ -229,6 +229,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="real-media section" aria-label="Karaokê Disk Karaokê em ação">
+        <div className="real-media-intro">
+          <div className="section-tag">O equipamento em ação</div>
+          <h2>Estrutura de verdade<br /><span>para a sua festa.</span></h2>
+          <p>TV, som, microfones sem fio e um sistema simples de usar para a festa começar sem espera.</p>
+        </div>
+        <div className="real-media-layout">
+          <img src="/media/karaoke-setup-completo.webp" alt="Estrutura completa de karaokê com TV e sistema de som" width={1600} height={1200} loading="lazy" />
+          <div className="video-gallery">
+            {["01", "02", "03"].map((video) => (
+              <video key={video} controls playsInline preload="metadata" poster={`/media/karaoke-em-acao-${video}.webp`}>
+                <source src={`/media/karaoke-em-acao-${video}.mp4`} type="video/mp4" />
+                Seu navegador não suporta vídeos em HTML5.
+              </video>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="occasions section">
         <div className="occasions-copy">
           <div className="section-tag">Cabe na sua comemoração</div>
