@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# Entrega arquivos e pastas reais diretamente.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Fallback para navegação SPA/rotas futuras em Apache.
+RewriteRule ^ index.html [L]
