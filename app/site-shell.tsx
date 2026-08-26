@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const whatsappBaseMessage =
   "Olá! Vi o site da Disk Karaokê e quero consultar disponibilidade e valores para o meu evento.";
 
@@ -35,17 +37,10 @@ function SocialIcon({ name }: { name: "instagram" | "facebook" }) {
 export function SiteHeader({ active }: { active?: "home" | "about" | "products" }) {
   return (
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Disk Karaokê — início">
+      <Link className="brand" href="/" aria-label="Disk Karaokê — início">
         <img src="/logo-disk-karaoke.webp" alt="Disk Karaokê" width={500} height={253} />
-      </a>
-      <nav aria-label="Navegação principal">
-        <a href="/" aria-current={active === "home" ? "page" : undefined}>Início</a>
-        <a href="/sobre" aria-current={active === "about" ? "page" : undefined}>Sobre</a>
-        <a href="/produtos" aria-current={active === "products" ? "page" : undefined}>Produtos</a>
-        <a href="/#como-funciona">Como funciona</a>
-        <a href="/#duvidas">Dúvidas</a>
-        <a href="#contato">Contato</a>
-      </nav>
+      </Link>
+      <MobileMenu active={active} />
     </header>
   );
 }
@@ -61,11 +56,11 @@ export function SiteFooter() {
 
         <div className="footer-column">
           <h2>Navegue</h2>
-          <a href="/">Início</a>
-          <a href="/sobre">Sobre</a>
-          <a href="/produtos">Produtos</a>
-          <a href="/#como-funciona">Como funciona</a>
-          <a href="/#duvidas">Dúvidas</a>
+          <Link href="/">Início</Link>
+          <Link href="/sobre">Sobre</Link>
+          <Link href="/produtos">Produtos</Link>
+          <Link href="/#como-funciona">Como funciona</Link>
+          <Link href="/#duvidas">Dúvidas</Link>
         </div>
 
         <div className="footer-column footer-contact">
@@ -98,3 +93,4 @@ export function FloatingWhatsApp() {
     </a>
   );
 }
+import { MobileMenu } from "./mobile-menu";

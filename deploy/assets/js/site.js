@@ -75,3 +75,13 @@ document.querySelectorAll(".media-carousel").forEach((carousel) => {
   carousel.querySelector("[data-carousel-next]").addEventListener("click", () => show(active + 1));
   dots.forEach((dot, index) => dot.addEventListener("click", () => show(index)));
 });
+
+document.querySelectorAll(".mobile-menu-toggle").forEach((toggle) => {
+  const menu = document.getElementById(toggle.getAttribute("aria-controls"));
+  toggle.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!open));
+    toggle.classList.toggle("is-open", !open);
+    menu.classList.toggle("is-open", !open);
+  });
+});
