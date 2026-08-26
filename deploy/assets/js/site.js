@@ -55,3 +55,23 @@ if (prefersReducedMotion) {
 
   revealTargets.forEach((target) => observer.observe(target));
 }
+
+document.querySelectorAll(".media-carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".media-carousel-track");
+  const slides = Array.from(carousel.querySelectorAll(".media-carousel-slide"));
+  const dots = Array.from(carousel.querySelectorAll(".media-carousel-dots button"));
+  let active = 0;
+
+  const show = (index) => {
+    active = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${active * 100}%)`;
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === active);
+      dot.setAttribute("aria-current", dotIndex === active ? "true" : "false");
+    });
+  };
+
+  carousel.querySelector("[data-carousel-prev]").addEventListener("click", () => show(active - 1));
+  carousel.querySelector("[data-carousel-next]").addEventListener("click", () => show(active + 1));
+  dots.forEach((dot, index) => dot.addEventListener("click", () => show(index)));
+});

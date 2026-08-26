@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MediaCarousel } from "./media-carousel";
 import { ScrollEffects } from "./scroll-effects";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WhatsAppIcon, whatsappLink } from "./site-shell";
 
@@ -235,17 +236,7 @@ export default function Home() {
           <h2>Estrutura de verdade<br /><span>para a sua festa.</span></h2>
           <p>TV, som, microfones sem fio e um sistema simples de usar para a festa começar sem espera.</p>
         </div>
-        <div className="real-media-layout">
-          <img src="/media/karaoke-setup-completo.webp" alt="Estrutura completa de karaokê com TV e sistema de som" width={1600} height={1200} loading="lazy" />
-          <div className="video-gallery">
-            {["01", "02", "03"].map((video) => (
-              <video key={video} controls playsInline preload="metadata" poster={`/media/karaoke-em-acao-${video}.webp`}>
-                <source src={`/media/karaoke-em-acao-${video}.mp4`} type="video/mp4" />
-                Seu navegador não suporta vídeos em HTML5.
-              </video>
-            ))}
-          </div>
-        </div>
+        <MediaCarousel />
       </section>
 
       <section className="occasions section">
