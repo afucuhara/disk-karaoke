@@ -1,10 +1,11 @@
 export const whatsappBaseMessage =
   "Olá! Vi o site da Disk Karaokê e quero consultar disponibilidade e valores para o meu evento.";
 
-export const whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappBaseMessage)}`;
+export const whatsappPhone = "5511924813930";
+export const whatsappLink = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(whatsappBaseMessage)}`;
 
 export function packageWhatsappLink(packageName: string) {
-  return `https://wa.me/?text=${encodeURIComponent(
+  return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(
     `Olá! Tenho interesse no pacote ${packageName}. Meu evento será no dia ___, em ___, para aproximadamente ___ pessoas. Gostaria de consultar disponibilidade e receber um orçamento.`,
   )}`;
 }
@@ -70,7 +71,7 @@ export function SiteFooter() {
         <div className="footer-column footer-contact">
           <h2>Fale com a gente</h2>
           <a href="mailto:contato@diskkaraoke.com.br">contato@diskkaraoke.com.br</a>
-          <a href="tel:+5511999990000">(11) 99999-0000</a>
+          <a href={`tel:+${whatsappPhone}`}>11 92481-3930</a>
           <span>Atendimento em São Paulo e região</span>
         </div>
 
