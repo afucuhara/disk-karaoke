@@ -27,7 +27,7 @@ main { overflow: hidden; }
 .site-header {
   position: fixed; z-index: 60; top: 0; left: 0;
   width: 100%; height: 88px; padding: 0 max(36px, calc((100vw - 1380px) / 2));
-  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  display: grid; grid-template-columns: auto 1fr; align-items: center;
   border-bottom: 1px solid var(--line);
   background: rgba(7, 7, 9, .72);
   backdrop-filter: blur(18px);
@@ -35,7 +35,7 @@ main { overflow: hidden; }
 }
 .brand { grid-column: 1; display: inline-flex; align-items: center; justify-self: start; }
 .brand img { width: 164px; height: 82px; object-fit: contain; filter: drop-shadow(0 0 16px rgba(255,47,146,.22)); }
-.site-header nav { grid-column: 2; display: flex; justify-content: center; gap: 42px; }
+.site-header nav { grid-column: 2; display: flex; justify-content: flex-end; gap: 42px; }
 .site-header nav a, .footer-links a {
   font-size: 16px; font-weight: 800; color: #ece9ef; transition: color .2s ease;
 }
@@ -428,7 +428,7 @@ main { overflow: hidden; }
   .site-header { height: 154px; padding-left: 12px; padding-right: 12px; grid-template-columns: 1fr; grid-template-rows: 62px 92px; }
   .brand { grid-column: 1; grid-row: 1; justify-self: center; }
   .brand img { width: 124px; height: 62px; }
-  .site-header nav { width: 100%; grid-column: 1; grid-row: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-self: stretch; justify-self: stretch; gap: 0 8px; padding-bottom: 10px; }
+  .site-header nav { width: 100%; grid-column: 1; grid-row: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-self: stretch; justify-self: stretch; justify-content: center; gap: 0 8px; padding-bottom: 10px; }
   .site-header nav a { display: grid; place-items: center; min-width: 0; font-size: 10px; line-height: 1.15; text-align: center; white-space: normal; }
   .hero { min-height: 820px; padding: 178px 20px 60px; }
   .hero-slide { background-position: 64% center; }
