@@ -70,7 +70,7 @@ export function SiteFooter() {
 
         <div className="footer-column footer-contact">
           <h2>Fale com a gente</h2>
-          <a href="mailto:contato@diskkaraoke.com.br">contato@diskkaraoke.com.br</a>
+          <a href="mailto:contato.diskkaraoke@gmail.com">contato.diskkaraoke@gmail.com</a>
           <a href={`tel:+${whatsappPhone}`}>11 92481-3930</a>
           <span>Atendimento em São Paulo e região</span>
         </div>
