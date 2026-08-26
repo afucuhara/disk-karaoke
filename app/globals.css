@@ -12,6 +12,24 @@
   --line: rgba(255, 255, 255, 0.13);
 }
 
+@media (max-width: 720px) {
+  .site-header .mobile-menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+  }
+  .site-header .mobile-menu-toggle span {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 2px;
+    min-height: 2px;
+    background: #fff;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {

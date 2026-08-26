@@ -78,6 +78,7 @@ document.querySelectorAll(".media-carousel").forEach((carousel) => {
 
 document.querySelectorAll(".mobile-menu-toggle").forEach((toggle) => {
   const menu = document.getElementById(toggle.getAttribute("aria-controls"));
+  if (!menu) return;
   toggle.addEventListener("click", () => {
     const open = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!open));
