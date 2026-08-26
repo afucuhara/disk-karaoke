@@ -23,18 +23,18 @@ export const metadata: Metadata = {
 const benefits = [
   {
     icon: "music",
-    title: "músicas atualizadas",
-    text: "Dos clássicos que atravessam gerações aos hits do momento.",
+    title: "+12.000 músicas atualizadas",
+    text: "Do clássico ao hit atual, com repertório nacional e internacional.",
   },
   {
     icon: "microphone",
-    title: "palco para todos",
-    text: "Pontuação individual para criar disputas divertidas entre a galera.",
+    title: "pontuação por microfone",
+    text: "Cada microfone marca pontos separadamente, perfeito para duelos e competições.",
   },
   {
     icon: "check",
-    title: "zero preocupação",
-    text: "Nós entregamos, montamos e deixamos tudo pronto para cantar.",
+    title: "controle de tom",
+    text: "Suba ou desça a tonalidade para a música encaixar certinho na sua voz.",
   },
 ];
 
@@ -184,6 +184,7 @@ export default function Home() {
         <div className="story-grid">
           <div><h2>Chega de festa com todo mundo <span>olhando para a tela.</span></h2></div>
           <div className="story-copy">
+            <p>A gente transforma a sua festa em um verdadeiro show onde todo mundo vira atração principal. O Disk Karaokê leva a estrutura completa pra colocar amigos e família cantando juntos, rindo alto e disputando cada nota no microfone.</p>
             <p>Quando o karaokê entra em cena, o celular sai da mão. A sala vira palco, os amigos viram torcida e aquela reunião comum ganha histórias que todo mundo vai lembrar.</p>
             <p className="highlight-line">Não é só aluguel de equipamento. É conexão real, ao vivo e sem filtro.</p>
           </div>
@@ -194,7 +195,7 @@ export default function Home() {
           <div className="moment-copy">
             <p className="eyebrow"><span /> A energia muda na hora</p>
             <h3>Um show montado onde a sua festa estiver.</h3>
-            <p>Você escolhe a data. A Disk Karaokê leva a experiência, monta e configura tudo. Depois é só escolher a música, pegar o microfone e soltar a voz.</p>
+            <p>Você escolhe a data. A Disk Karaokê leva a experiência, monta e configura tudo. Depois é só escolher entre mais de 12.000 músicas, ajustar o tom, pegar o microfone e soltar a voz.</p>
             <a className="text-link pink" href={whatsappLink} target="_blank" rel="noreferrer">Quero levar para meu evento <span>↗</span></a>
           </div>
         </div>
@@ -246,8 +247,8 @@ export default function Home() {
         <h2>Porque a melhor parte da festa <em>não cabe em um post.</em></h2>
         <div className="manifesto-grid">
           <div><div className="manifesto-icon"><ManifestoIcon name="repertoire" /></div><h3>Repertório de verdade</h3><p>Mais de 12.000 opções para ninguém ficar sem a música que ama.</p></div>
-          <div><div className="manifesto-icon"><ManifestoIcon name="connection" /></div><h3>Diversão que conecta</h3><p>Pontuação individual para criar torcida, risadas e uma disputa saudável.</p></div>
-          <div><div className="manifesto-icon"><ManifestoIcon name="easy" /></div><h3>Praticidade completa</h3><p>Entrega, montagem e configuração incluídas para você curtir o evento.</p></div>
+          <div><div className="manifesto-icon"><ManifestoIcon name="connection" /></div><h3>Diversão que conecta</h3><p>Pontuação individual por microfone para criar torcida, risadas e uma disputa saudável.</p></div>
+          <div><div className="manifesto-icon"><ManifestoIcon name="easy" /></div><h3>Praticidade completa</h3><p>Controle de tom, entrega, montagem e configuração para você curtir o evento.</p></div>
         </div>
       </section>
 

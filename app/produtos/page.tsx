@@ -25,38 +25,38 @@ const packages = [
     number: "01",
     title: "Locação do Karaokê",
     description: "A experiência essencial para quem já possui televisão e estrutura de som no local.",
-    includes: ["Equipamento de karaokê", "2 microfones sem fio", "Mais de 12 mil músicas", "Pontuação individual", "Entrega, montagem e configuração"],
+    includes: ["Equipamento de karaokê", "2 microfones sem fio", "Mais de 12 mil músicas", "Pontuação por microfone", "Controle de tom", "Entrega, montagem e configuração"],
     ideal: "Encontros menores e locais que já tenham TV e som compatíveis.",
   },
   {
     number: "02",
     title: "Karaokê + Som",
     description: "Karaokê completo com sistema de som dimensionado para o ambiente do evento.",
-    includes: ["Tudo do pacote Karaokê", "Sistema de som", "Cabos e conexões necessários", "Configuração de áudio", "Orientação para utilização"],
+    includes: ["Tudo do pacote Karaokê", "Sistema de som", "Pontuação por microfone", "Controle de tom", "Cabos e conexões necessários", "Configuração de áudio"],
     ideal: "Casas, salões e espaços que já tenham uma tela disponível.",
   },
   {
     number: "03",
     title: "Karaokê + Som + TV",
     description: "Uma estrutura pronta para transformar qualquer ambiente em palco, do áudio à letra na tela.",
-    includes: ["Equipamento de karaokê", "2 microfones sem fio", "Sistema de som", "TV com suporte", "Montagem completa"],
+    includes: ["Equipamento de karaokê", "2 microfones sem fio", "Mais de 12 mil músicas", "Sistema de som", "TV com suporte", "Montagem completa"],
     ideal: "Eventos que precisam de uma solução completa de áudio e imagem.",
   },
   {
     number: "04",
     title: "Kit Festa Completo",
     description: "O pacote mais completo, com som, imagem e iluminação para criar clima de show.",
-    includes: ["Karaokê e 2 microfones sem fio", "Sistema de som", "TV com suporte", "Jogo de luzes", "Entrega, instalação e retirada"],
+    includes: ["Karaokê e 2 microfones sem fio", "Sistema de som", "TV com suporte", "Jogo de luzes", "Pontuação por microfone e controle de tom", "Entrega, instalação e retirada"],
     ideal: "Aniversários, confraternizações e festas que pedem uma produção marcante.",
     featured: true,
   },
 ];
 
 const equipmentDetails = [
-  { value: "+12 mil", label: "músicas disponíveis", text: "Sucessos de diferentes estilos e gerações para ninguém ficar sem cantar." },
-  { value: "2", label: "microfones sem fio", text: "Mais liberdade para duetos, desafios e interação com os convidados." },
+  { value: "+12 mil", label: "músicas atualizadas", text: "Do clássico ao hit atual, nacional e internacional, para ninguém ficar sem cantar." },
+  { value: "2", label: "microfones sem fio", text: "Cada microfone marca ponto separado, perfeito para duelos e competições." },
+  { value: "±", label: "controle de tom", text: "Suba ou desça a tonalidade da música para encaixar certinho na voz de quem está cantando." },
   { value: "100%", label: "pronto para usar", text: "A equipe entrega, instala, configura e explica o funcionamento." },
-  { value: "1 a 10", label: "pontuação individual", text: "Cada apresentação ganha nota e deixa a disputa ainda mais divertida." },
 ];
 
 export default function ProductsPage() {

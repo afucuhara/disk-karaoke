@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const principles = [
   { number: "01", title: "Diversão que aproxima", text: "O karaokê quebra o gelo, reúne gerações e transforma convidados em parte do evento." },
   { number: "02", title: "Estrutura sem complicação", text: "A equipe entrega, monta e configura os equipamentos para a festa começar com tudo funcionando." },
-  { number: "03", title: "Repertório para todo mundo", text: "Mais de 12 mil músicas entre clássicos e sucessos atuais ajudam cada convidado a encontrar sua voz." },
+  { number: "03", title: "Recursos para soltar a voz", text: "Mais de 12 mil músicas, pontuação por microfone e controle de tom para cada convidado cantar do seu jeito." },
 ];
 
 const commitments = [
@@ -54,7 +54,8 @@ export default function AboutPage() {
           <h2>Não alugamos apenas equipamentos. Preparamos o palco da sua festa.</h2>
         </div>
         <div className="about-story-copy">
-          <p>A Disk Karaokê nasceu de uma ideia simples: os melhores eventos são aqueles em que as pessoas realmente se encontram. Quando surge uma música conhecida, alguém pega o microfone, a torcida se forma e o ambiente inteiro ganha outra energia.</p>
+          <p>A gente transforma a sua festa em um verdadeiro show onde todo mundo vira atração principal. O Disk Karaokê leva a estrutura completa pra colocar amigos e família cantando juntos, rindo alto e disputando cada nota no microfone.</p>
+          <p>A gente entrega a desculpa perfeita pra transformar qualquer reunião num evento inesquecível. A Disk Karaokê nasceu de uma ideia simples: os melhores eventos são aqueles em que as pessoas realmente se encontram.</p>
           <p>Por isso, nosso serviço combina equipamento de karaokê, repertório amplo e uma estrutura pensada para cada ocasião. A gente cuida da parte técnica para o anfitrião aproveitar o evento e os convidados se concentrarem no que importa: cantar, rir e criar boas memórias.</p>
           <p className="about-highlight">Sua casa, chácara, salão ou empresa pode virar palco sem transformar a organização da festa em mais uma preocupação.</p>
         </div>
