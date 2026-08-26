@@ -135,6 +135,14 @@ export default function ProductsPage() {
           <img src="/media/karaoke-microfones.webp" alt="Dois microfones sem fio diante da tela do karaokê" width={1600} height={1600} loading="lazy" />
           <img src="/media/karaoke-pontuacao.webp" alt="Tela do karaokê exibindo a pontuação da apresentação" width={1600} height={1600} loading="lazy" />
         </div>
+        <div className="product-video-gallery" aria-label="Vídeos do karaokê em ação">
+          {["01", "02", "03"].map((video) => (
+            <video key={video} controls playsInline preload="metadata" poster={`/media/karaoke-em-acao-${video}.webp`}>
+              <source src={`/media/karaoke-em-acao-${video}.mp4`} type="video/mp4" />
+              Seu navegador não suporta vídeos em HTML5.
+            </video>
+          ))}
+        </div>
       </section>
 
       <section className="quote-guide section">

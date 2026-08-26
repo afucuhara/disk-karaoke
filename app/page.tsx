@@ -237,14 +237,6 @@ export default function Home() {
           <p>TV, som, microfones sem fio e um sistema simples de usar para a festa começar sem espera.</p>
         </div>
         <MediaCarousel />
-        <div className="video-gallery real-media-videos" aria-label="Vídeos do karaokê em ação">
-          {["01", "02", "03"].map((video) => (
-            <video key={video} controls playsInline preload="metadata" poster={`/media/karaoke-em-acao-${video}.webp`}>
-              <source src={`/media/karaoke-em-acao-${video}.mp4`} type="video/mp4" />
-              Seu navegador não suporta vídeos em HTML5.
-            </video>
-          ))}
-        </div>
       </section>
 
       <section className="occasions section">
