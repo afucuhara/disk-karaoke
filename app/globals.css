@@ -46,6 +46,22 @@
   }
 }
 
+@media (max-width: 720px) {
+  .mobile-menu-overlay { display: none; }
+  body.mobile-menu-open .mobile-menu-overlay { display: block; }
+  .hero,
+  .products-hero,
+  .about-hero {
+    min-height: 550px;
+    padding-top: 108px;
+    background-size: auto, auto, cover;
+  }
+  .hero-slide {
+    background-size: auto, auto, cover;
+    background-position: center center;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -691,5 +707,21 @@ main { overflow: hidden; }
     margin-top: 20px;
     font-size: 15px;
     line-height: 1.55;
+  }
+}
+
+@media (max-width: 720px) {
+  .mobile-menu-overlay { display: none; }
+  body.mobile-menu-open .mobile-menu-overlay { display: block; }
+  .hero,
+  .products-hero,
+  .about-hero {
+    min-height: 550px;
+    padding-top: 108px;
+    background-size: auto, auto, cover;
+  }
+  .hero-slide {
+    background-size: auto, auto, cover;
+    background-position: center center;
   }
 }
