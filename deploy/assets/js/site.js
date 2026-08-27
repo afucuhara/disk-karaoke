@@ -79,6 +79,8 @@ document.querySelectorAll(".media-carousel").forEach((carousel) => {
 document.querySelectorAll(".mobile-menu-toggle").forEach((toggle) => {
   const menu = document.getElementById(toggle.getAttribute("aria-controls"));
   if (!menu) return;
+  const header = toggle.closest(".site-header");
+  const mediaQuery = window.matchMedia("(max-width: 720px)");
   let overlay = document.querySelector(".mobile-menu-overlay");
   if (!overlay) {
     overlay = document.createElement("button");
@@ -93,10 +95,18 @@ document.querySelectorAll(".mobile-menu-toggle").forEach((toggle) => {
     menu.classList.remove("is-open");
     document.body.classList.remove("mobile-menu-open");
   };
+  const moveMenuToViewport = () => {
+    if (menu.parentElement !== document.body) document.body.appendChild(menu);
+  };
+  const restoreDesktopMenu = () => {
+    if (header && menu.parentElement !== header) header.appendChild(menu);
+    closeMenu();
+  };
   toggle.addEventListener("click", () => {
     const open = toggle.getAttribute("aria-expanded") === "true";
     if (open) closeMenu();
     else {
+      moveMenuToViewport();
       toggle.setAttribute("aria-expanded", "true");
       toggle.classList.add("is-open");
       menu.classList.add("is-open");
@@ -105,4 +115,7 @@ document.querySelectorAll(".mobile-menu-toggle").forEach((toggle) => {
   });
   overlay.addEventListener("click", closeMenu);
   menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  mediaQuery.addEventListener("change", (event) => {
+    if (!event.matches) restoreDesktopMenu();
+  });
 });

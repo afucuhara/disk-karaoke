@@ -244,6 +244,51 @@
 }
 
 @media (max-width: 720px) {
+  .site-header { z-index: 1001 !important; }
+  .mobile-menu-overlay {
+    z-index: 999;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: rgba(0, 0, 0, .56);
+  }
+  body > .site-nav.is-open {
+    position: fixed !important;
+    z-index: 1000 !important;
+    inset: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    width: 100vw !important;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: calc(94px + env(safe-area-inset-top)) 24px calc(24px + env(safe-area-inset-bottom)) !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: rgba(7, 7, 9, .99);
+    box-shadow: none;
+  }
+  body > .site-nav.is-open a {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,.11);
+    color: #f7f5f2;
+    font-size: 16px !important;
+    font-weight: 800;
+    line-height: 1.25;
+    white-space: normal;
+  }
+  body > .site-nav.is-open a:last-child { border-bottom: 0; }
+  .site-header .mobile-menu-toggle { z-index: 1002 !important; }
+}
+
+@media (max-width: 720px) {
   body.mobile-menu-open { overflow: hidden; }
   .mobile-menu-overlay {
     position: fixed;
