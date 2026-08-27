@@ -324,3 +324,33 @@
   }
   .site-header .mobile-menu-toggle { z-index: 100; }
 }
+
+@media (max-width: 720px) {
+  .hero,
+  .products-hero,
+  .about-hero {
+    min-height: 590px !important;
+    padding: 116px 20px 46px !important;
+    background-position: center center !important;
+    background-size: auto, auto, contain !important;
+    background-repeat: no-repeat !important;
+  }
+  .hero { align-items: flex-end; }
+  .hero-slide {
+    background-position: center center !important;
+    background-size: auto, auto, contain !important;
+  }
+  .hero h1,
+  .products-hero h1,
+  .about-hero h1 {
+    font-size: clamp(40px, 11.5vw, 52px) !important;
+    line-height: .92 !important;
+  }
+  .hero-text,
+  .products-hero-copy > p:not(.eyebrow),
+  .about-hero-copy > p:not(.eyebrow) {
+    margin-top: 20px !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+}

@@ -663,3 +663,33 @@ main { overflow: hidden; }
   .mobile-site-nav a:last-child { border-bottom: 0; }
   .site-header .mobile-menu-toggle { z-index: 1002; }
 }
+
+@media (max-width: 720px) {
+  .hero,
+  .products-hero,
+  .about-hero {
+    min-height: 590px;
+    padding: 116px 20px 46px;
+    background-position: center center;
+    background-size: auto, auto, contain;
+    background-repeat: no-repeat;
+  }
+  .hero { align-items: flex-end; }
+  .hero-slide {
+    background-position: center center;
+    background-size: auto, auto, contain;
+  }
+  .hero h1,
+  .products-hero h1,
+  .about-hero h1 {
+    font-size: clamp(40px, 11.5vw, 52px);
+    line-height: .92;
+  }
+  .hero-text,
+  .products-hero-copy > p:not(.eyebrow),
+  .about-hero-copy > p:not(.eyebrow) {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+}
