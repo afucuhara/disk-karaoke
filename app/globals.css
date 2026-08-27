@@ -13,6 +13,17 @@
 }
 
 @media (max-width: 720px) {
+  body { overflow-x: hidden; }
+  .site-header { overflow: visible; }
+  .site-header nav.is-open {
+    right: 0;
+    width: auto;
+    max-width: 100vw;
+    box-sizing: border-box;
+    max-height: calc(100vh - 78px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
   .site-header .mobile-menu-toggle {
     display: flex !important;
     flex-direction: column;
