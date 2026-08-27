@@ -1,11 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export function MobileMenu({ active }: { active?: "home" | "about" | "products" }) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("mobile-menu-open", open);
+    return () => document.body.classList.remove("mobile-menu-open");
+  }, [open]);
 
   return (
     <>
@@ -20,6 +25,7 @@ export function MobileMenu({ active }: { active?: "home" | "about" | "products" 
         <Link href="/#duvidas" onClick={close}>Dúvidas</Link>
         <a href="#contato" onClick={close}>Contato</a>
       </nav>
+      {open && <button className="mobile-menu-overlay" type="button" aria-label="Fechar menu" onClick={close} />}
     </>
   );
 }

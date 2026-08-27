@@ -79,10 +79,30 @@ document.querySelectorAll(".media-carousel").forEach((carousel) => {
 document.querySelectorAll(".mobile-menu-toggle").forEach((toggle) => {
   const menu = document.getElementById(toggle.getAttribute("aria-controls"));
   if (!menu) return;
+  let overlay = document.querySelector(".mobile-menu-overlay");
+  if (!overlay) {
+    overlay = document.createElement("button");
+    overlay.className = "mobile-menu-overlay";
+    overlay.type = "button";
+    overlay.setAttribute("aria-label", "Fechar menu");
+    document.body.appendChild(overlay);
+  }
+  const closeMenu = () => {
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.classList.remove("is-open");
+    menu.classList.remove("is-open");
+    document.body.classList.remove("mobile-menu-open");
+  };
   toggle.addEventListener("click", () => {
     const open = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!open));
-    toggle.classList.toggle("is-open", !open);
-    menu.classList.toggle("is-open", !open);
+    if (open) closeMenu();
+    else {
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.classList.add("is-open");
+      menu.classList.add("is-open");
+      document.body.classList.add("mobile-menu-open");
+    }
   });
+  overlay.addEventListener("click", closeMenu);
+  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 });

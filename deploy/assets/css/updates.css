@@ -242,3 +242,40 @@
   .product-media-grid { grid-template-columns: 1fr; margin-top: 38px; }
   .product-media-grid img { min-height: 360px; }
 }
+
+@media (max-width: 720px) {
+  body.mobile-menu-open { overflow: hidden; }
+  .mobile-menu-overlay {
+    position: fixed;
+    z-index: 79;
+    inset: 78px 0 0;
+    width: 100vw;
+    height: calc(100dvh - 78px);
+    border: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, .58);
+    cursor: pointer;
+  }
+  .site-header nav.is-open {
+    position: fixed !important;
+    z-index: 90 !important;
+    top: calc(78px + env(safe-area-inset-top)) !important;
+    right: 0 !important;
+    bottom: env(safe-area-inset-bottom) !important;
+    left: auto !important;
+    width: min(65vw, 360px) !important;
+    max-width: calc(100vw - 12px);
+    height: auto;
+    max-height: calc(100dvh - 78px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 16px 20px calc(18px + env(safe-area-inset-bottom)) !important;
+  }
+  .site-header nav.is-open a {
+    display: block;
+    min-height: 48px;
+    padding: 14px 0 !important;
+    white-space: normal;
+  }
+  .site-header .mobile-menu-toggle { z-index: 100; }
+}
